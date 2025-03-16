@@ -15,7 +15,11 @@ import {
     renameQuestionById,
     changeQuestionTypeById,
     editOption,
+<<<<<<< HEAD
     duplicateQuestionInArray,
+=======
+    duplicateQuestionInArray
+>>>>>>> origin/task-forms
 } from "./nested";
 import testQuestionData from "./data/questions.json";
 import backupQuestionData from "./data/questions.json";
@@ -25,7 +29,11 @@ const {
     SIMPLE_QUESTIONS,
     TRIVIA_QUESTIONS,
     EMPTY_QUESTIONS,
+<<<<<<< HEAD
     SIMPLE_QUESTIONS_2,
+=======
+    SIMPLE_QUESTIONS_2
+>>>>>>> origin/task-forms
 }: Record<string, Question[]> =
     // Typecast the test data that we imported to be a record matching
     //  strings to the question list
@@ -37,7 +45,11 @@ const {
     SIMPLE_QUESTIONS: BACKUP_SIMPLE_QUESTIONS,
     TRIVIA_QUESTIONS: BACKUP_TRIVIA_QUESTIONS,
     EMPTY_QUESTIONS: BACKUP_EMPTY_QUESTIONS,
+<<<<<<< HEAD
     SIMPLE_QUESTIONS_2: BACKUP_SIMPLE_QUESTIONS_2,
+=======
+    SIMPLE_QUESTIONS_2: BACKUP_SIMPLE_QUESTIONS_2
+>>>>>>> origin/task-forms
 }: Record<string, Question[]> = backupQuestionData as Record<
     string,
     Question[]
@@ -51,7 +63,11 @@ const NEW_BLANK_QUESTION = {
     options: [],
     expected: "",
     points: 1,
+<<<<<<< HEAD
     published: false,
+=======
+    published: false
+>>>>>>> origin/task-forms
 };
 
 const NEW_TRIVIA_QUESTION = {
@@ -66,7 +82,11 @@ const NEW_TRIVIA_QUESTION = {
     options: ["Black, like my soul", "Blue again, we're tricky.", "#FFD200"],
     expected: "#FFD200",*/
     points: 1,
+<<<<<<< HEAD
     published: false,
+=======
+    published: false
+>>>>>>> origin/task-forms
 };
 
 ////////////////////////////////////////////
@@ -87,7 +107,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "4",
                 points: 1,
+<<<<<<< HEAD
                 published: true,
+=======
+                published: true
+>>>>>>> origin/task-forms
             },
             {
                 id: 5,
@@ -97,12 +121,21 @@ describe("Testing the Question[] functions", () => {
                 options: ["red", "apple", "firetruck"],
                 expected: "red",
                 points: 1,
+<<<<<<< HEAD
                 published: true,
             },
         ]);
         expect(getPublishedQuestions(TRIVIA_QUESTIONS)).toEqual([]);
         expect(getPublishedQuestions(SIMPLE_QUESTIONS_2)).toEqual(
             BACKUP_SIMPLE_QUESTIONS_2,
+=======
+                published: true
+            }
+        ]);
+        expect(getPublishedQuestions(TRIVIA_QUESTIONS)).toEqual([]);
+        expect(getPublishedQuestions(SIMPLE_QUESTIONS_2)).toEqual(
+            BACKUP_SIMPLE_QUESTIONS_2
+>>>>>>> origin/task-forms
         );
         expect(getPublishedQuestions(EMPTY_QUESTIONS)).toEqual([
             {
@@ -113,7 +146,11 @@ describe("Testing the Question[] functions", () => {
                 options: ["correct", "it is", "not"],
                 expected: "correct",
                 points: 5,
+<<<<<<< HEAD
                 published: true,
+=======
+                published: true
+>>>>>>> origin/task-forms
             },
             {
                 id: 2,
@@ -123,7 +160,11 @@ describe("Testing the Question[] functions", () => {
                 options: ["this", "one", "is", "not", "empty", "either"],
                 expected: "one",
                 points: 5,
+<<<<<<< HEAD
                 published: true,
+=======
+                published: true
+>>>>>>> origin/task-forms
             },
             {
                 id: 3,
@@ -133,7 +174,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "",
                 points: 5,
+<<<<<<< HEAD
                 published: true,
+=======
+                published: true
+>>>>>>> origin/task-forms
             },
             {
                 id: 4,
@@ -143,14 +188,20 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "Even this one is not empty",
                 points: 5,
+<<<<<<< HEAD
                 published: true,
             },
+=======
+                published: true
+            }
+>>>>>>> origin/task-forms
         ]);
     });
 
     test("Testing the getNonEmptyQuestions functions", () => {
         expect(getNonEmptyQuestions(BLANK_QUESTIONS)).toEqual([]);
         expect(getNonEmptyQuestions(SIMPLE_QUESTIONS)).toEqual(
+<<<<<<< HEAD
             BACKUP_SIMPLE_QUESTIONS,
         );
         expect(getNonEmptyQuestions(TRIVIA_QUESTIONS)).toEqual(
@@ -158,6 +209,15 @@ describe("Testing the Question[] functions", () => {
         );
         expect(getNonEmptyQuestions(SIMPLE_QUESTIONS_2)).toEqual(
             BACKUP_SIMPLE_QUESTIONS_2,
+=======
+            BACKUP_SIMPLE_QUESTIONS
+        );
+        expect(getNonEmptyQuestions(TRIVIA_QUESTIONS)).toEqual(
+            BACKUP_TRIVIA_QUESTIONS
+        );
+        expect(getNonEmptyQuestions(SIMPLE_QUESTIONS_2)).toEqual(
+            BACKUP_SIMPLE_QUESTIONS_2
+>>>>>>> origin/task-forms
         );
         expect(getNonEmptyQuestions(EMPTY_QUESTIONS)).toEqual([
             {
@@ -168,7 +228,11 @@ describe("Testing the Question[] functions", () => {
                 options: ["correct", "it is", "not"],
                 expected: "correct",
                 points: 5,
+<<<<<<< HEAD
                 published: true,
+=======
+                published: true
+>>>>>>> origin/task-forms
             },
             {
                 id: 2,
@@ -178,7 +242,11 @@ describe("Testing the Question[] functions", () => {
                 options: ["this", "one", "is", "not", "empty", "either"],
                 expected: "one",
                 points: 5,
+<<<<<<< HEAD
                 published: true,
+=======
+                published: true
+>>>>>>> origin/task-forms
             },
             {
                 id: 3,
@@ -188,7 +256,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "",
                 points: 5,
+<<<<<<< HEAD
                 published: true,
+=======
+                published: true
+>>>>>>> origin/task-forms
             },
             {
                 id: 4,
@@ -198,8 +270,13 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "Even this one is not empty",
                 points: 5,
+<<<<<<< HEAD
                 published: true,
             },
+=======
+                published: true
+            }
+>>>>>>> origin/task-forms
         ]);
     });
 
@@ -214,7 +291,11 @@ describe("Testing the Question[] functions", () => {
         expect(findQuestion(SIMPLE_QUESTIONS, 9)).toEqual(SIMPLE_QUESTIONS[3]);
         expect(findQuestion(SIMPLE_QUESTIONS, 6)).toEqual(null);
         expect(findQuestion(SIMPLE_QUESTIONS_2, 478)).toEqual(
+<<<<<<< HEAD
             SIMPLE_QUESTIONS_2[0],
+=======
+            SIMPLE_QUESTIONS_2[0]
+>>>>>>> origin/task-forms
         );
         expect(findQuestion([], 0)).toEqual(null);
     });
@@ -229,7 +310,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "",
                 points: 1,
+<<<<<<< HEAD
                 published: false,
+=======
+                published: false
+>>>>>>> origin/task-forms
             },
             {
                 id: 2,
@@ -239,8 +324,13 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "",
                 points: 1,
+<<<<<<< HEAD
                 published: false,
             },
+=======
+                published: false
+            }
+>>>>>>> origin/task-forms
         ]);
         expect(removeQuestion(BLANK_QUESTIONS, 47)).toEqual([
             {
@@ -251,7 +341,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "",
                 points: 1,
+<<<<<<< HEAD
                 published: false,
+=======
+                published: false
+>>>>>>> origin/task-forms
             },
             {
                 id: 2,
@@ -261,8 +355,13 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "",
                 points: 1,
+<<<<<<< HEAD
                 published: false,
             },
+=======
+                published: false
+            }
+>>>>>>> origin/task-forms
         ]);
         expect(removeQuestion(BLANK_QUESTIONS, 2)).toEqual([
             {
@@ -273,7 +372,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "",
                 points: 1,
+<<<<<<< HEAD
                 published: false,
+=======
+                published: false
+>>>>>>> origin/task-forms
             },
             {
                 id: 47,
@@ -283,8 +386,13 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "",
                 points: 1,
+<<<<<<< HEAD
                 published: false,
             },
+=======
+                published: false
+            }
+>>>>>>> origin/task-forms
         ]);
         expect(removeQuestion(SIMPLE_QUESTIONS, 9)).toEqual([
             {
@@ -295,7 +403,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "4",
                 points: 1,
+<<<<<<< HEAD
                 published: true,
+=======
+                published: true
+>>>>>>> origin/task-forms
             },
             {
                 id: 2,
@@ -305,7 +417,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "Z",
                 points: 1,
+<<<<<<< HEAD
                 published: false,
+=======
+                published: false
+>>>>>>> origin/task-forms
             },
             {
                 id: 5,
@@ -315,8 +431,13 @@ describe("Testing the Question[] functions", () => {
                 options: ["red", "apple", "firetruck"],
                 expected: "red",
                 points: 1,
+<<<<<<< HEAD
                 published: true,
             },
+=======
+                published: true
+            }
+>>>>>>> origin/task-forms
         ]);
         expect(removeQuestion(SIMPLE_QUESTIONS, 5)).toEqual([
             {
@@ -327,7 +448,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "4",
                 points: 1,
+<<<<<<< HEAD
                 published: true,
+=======
+                published: true
+>>>>>>> origin/task-forms
             },
             {
                 id: 2,
@@ -337,7 +462,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "Z",
                 points: 1,
+<<<<<<< HEAD
                 published: false,
+=======
+                published: false
+>>>>>>> origin/task-forms
             },
             {
                 id: 9,
@@ -347,8 +476,13 @@ describe("Testing the Question[] functions", () => {
                 options: ["square", "triangle", "circle"],
                 expected: "circle",
                 points: 2,
+<<<<<<< HEAD
                 published: false,
             },
+=======
+                published: false
+            }
+>>>>>>> origin/task-forms
         ]);
     });
 
@@ -356,32 +490,52 @@ describe("Testing the Question[] functions", () => {
         expect(getNames(BLANK_QUESTIONS)).toEqual([
             "Question 1",
             "My New Question",
+<<<<<<< HEAD
             "Question 2",
+=======
+            "Question 2"
+>>>>>>> origin/task-forms
         ]);
         expect(getNames(SIMPLE_QUESTIONS)).toEqual([
             "Addition",
             "Letters",
             "Colors",
+<<<<<<< HEAD
             "Shapes",
+=======
+            "Shapes"
+>>>>>>> origin/task-forms
         ]);
         expect(getNames(TRIVIA_QUESTIONS)).toEqual([
             "Mascot",
             "Motto",
+<<<<<<< HEAD
             "Goats",
+=======
+            "Goats"
+>>>>>>> origin/task-forms
         ]);
         expect(getNames(SIMPLE_QUESTIONS_2)).toEqual([
             "Students",
             "Importance",
             "Sentience",
             "Danger",
+<<<<<<< HEAD
             "Listening",
+=======
+            "Listening"
+>>>>>>> origin/task-forms
         ]);
         expect(getNames(EMPTY_QUESTIONS)).toEqual([
             "Empty 1",
             "Empty 2",
             "Empty 3",
             "Empty 4",
+<<<<<<< HEAD
             "Empty 5 (Actual)",
+=======
+            "Empty 5 (Actual)"
+>>>>>>> origin/task-forms
         ]);
     });
 
@@ -436,32 +590,52 @@ describe("Testing the Question[] functions", () => {
         expect(makeAnswers(BLANK_QUESTIONS)).toEqual([
             { questionId: 1, correct: false, text: "", submitted: false },
             { questionId: 47, correct: false, text: "", submitted: false },
+<<<<<<< HEAD
             { questionId: 2, correct: false, text: "", submitted: false },
+=======
+            { questionId: 2, correct: false, text: "", submitted: false }
+>>>>>>> origin/task-forms
         ]);
         expect(makeAnswers(SIMPLE_QUESTIONS)).toEqual([
             { questionId: 1, correct: false, text: "", submitted: false },
             { questionId: 2, correct: false, text: "", submitted: false },
             { questionId: 5, correct: false, text: "", submitted: false },
+<<<<<<< HEAD
             { questionId: 9, correct: false, text: "", submitted: false },
+=======
+            { questionId: 9, correct: false, text: "", submitted: false }
+>>>>>>> origin/task-forms
         ]);
         expect(makeAnswers(TRIVIA_QUESTIONS)).toEqual([
             { questionId: 1, correct: false, text: "", submitted: false },
             { questionId: 2, correct: false, text: "", submitted: false },
+<<<<<<< HEAD
             { questionId: 3, correct: false, text: "", submitted: false },
+=======
+            { questionId: 3, correct: false, text: "", submitted: false }
+>>>>>>> origin/task-forms
         ]);
         expect(makeAnswers(SIMPLE_QUESTIONS_2)).toEqual([
             { questionId: 478, correct: false, text: "", submitted: false },
             { questionId: 1937, correct: false, text: "", submitted: false },
             { questionId: 479, correct: false, text: "", submitted: false },
             { questionId: 777, correct: false, text: "", submitted: false },
+<<<<<<< HEAD
             { questionId: 1937, correct: false, text: "", submitted: false },
+=======
+            { questionId: 1937, correct: false, text: "", submitted: false }
+>>>>>>> origin/task-forms
         ]);
         expect(makeAnswers(EMPTY_QUESTIONS)).toEqual([
             { questionId: 1, correct: false, text: "", submitted: false },
             { questionId: 2, correct: false, text: "", submitted: false },
             { questionId: 3, correct: false, text: "", submitted: false },
             { questionId: 4, correct: false, text: "", submitted: false },
+<<<<<<< HEAD
             { questionId: 5, correct: false, text: "", submitted: false },
+=======
+            { questionId: 5, correct: false, text: "", submitted: false }
+>>>>>>> origin/task-forms
         ]);
     });
 
@@ -475,7 +649,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "",
                 points: 1,
+<<<<<<< HEAD
                 published: true,
+=======
+                published: true
+>>>>>>> origin/task-forms
             },
             {
                 id: 47,
@@ -485,7 +663,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "",
                 points: 1,
+<<<<<<< HEAD
                 published: true,
+=======
+                published: true
+>>>>>>> origin/task-forms
             },
             {
                 id: 2,
@@ -495,8 +677,13 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "",
                 points: 1,
+<<<<<<< HEAD
                 published: true,
             },
+=======
+                published: true
+            }
+>>>>>>> origin/task-forms
         ]);
         expect(publishAll(SIMPLE_QUESTIONS)).toEqual([
             {
@@ -507,7 +694,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "4",
                 points: 1,
+<<<<<<< HEAD
                 published: true,
+=======
+                published: true
+>>>>>>> origin/task-forms
             },
             {
                 id: 2,
@@ -517,7 +708,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "Z",
                 points: 1,
+<<<<<<< HEAD
                 published: true,
+=======
+                published: true
+>>>>>>> origin/task-forms
             },
             {
                 id: 5,
@@ -527,7 +722,11 @@ describe("Testing the Question[] functions", () => {
                 options: ["red", "apple", "firetruck"],
                 expected: "red",
                 points: 1,
+<<<<<<< HEAD
                 published: true,
+=======
+                published: true
+>>>>>>> origin/task-forms
             },
             {
                 id: 9,
@@ -537,8 +736,13 @@ describe("Testing the Question[] functions", () => {
                 options: ["square", "triangle", "circle"],
                 expected: "circle",
                 points: 2,
+<<<<<<< HEAD
                 published: true,
             },
+=======
+                published: true
+            }
+>>>>>>> origin/task-forms
         ]);
         expect(publishAll(TRIVIA_QUESTIONS)).toEqual([
             {
@@ -549,7 +753,11 @@ describe("Testing the Question[] functions", () => {
                 options: ["Bluey", "YoUDee", "Charles the Wonder Dog"],
                 expected: "YoUDee",
                 points: 7,
+<<<<<<< HEAD
                 published: true,
+=======
+                published: true
+>>>>>>> origin/task-forms
             },
             {
                 id: 2,
@@ -559,11 +767,19 @@ describe("Testing the Question[] functions", () => {
                 options: [
                     "Knowledge is the light of the mind",
                     "Just U Do it",
+<<<<<<< HEAD
                     "Nothing, what's the motto with you?",
                 ],
                 expected: "Knowledge is the light of the mind",
                 points: 3,
                 published: true,
+=======
+                    "Nothing, what's the motto with you?"
+                ],
+                expected: "Knowledge is the light of the mind",
+                points: 3,
+                published: true
+>>>>>>> origin/task-forms
             },
             {
                 id: 3,
@@ -573,12 +789,21 @@ describe("Testing the Question[] functions", () => {
                 options: [
                     "Zero, why would there be goats on the green?",
                     "18420",
+<<<<<<< HEAD
                     "Two",
                 ],
                 expected: "Two",
                 points: 10,
                 published: true,
             },
+=======
+                    "Two"
+                ],
+                expected: "Two",
+                points: 10,
+                published: true
+            }
+>>>>>>> origin/task-forms
         ]);
         expect(publishAll(EMPTY_QUESTIONS)).toEqual([
             {
@@ -589,7 +814,11 @@ describe("Testing the Question[] functions", () => {
                 options: ["correct", "it is", "not"],
                 expected: "correct",
                 points: 5,
+<<<<<<< HEAD
                 published: true,
+=======
+                published: true
+>>>>>>> origin/task-forms
             },
             {
                 id: 2,
@@ -599,7 +828,11 @@ describe("Testing the Question[] functions", () => {
                 options: ["this", "one", "is", "not", "empty", "either"],
                 expected: "one",
                 points: 5,
+<<<<<<< HEAD
                 published: true,
+=======
+                published: true
+>>>>>>> origin/task-forms
             },
             {
                 id: 3,
@@ -609,7 +842,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "",
                 points: 5,
+<<<<<<< HEAD
                 published: true,
+=======
+                published: true
+>>>>>>> origin/task-forms
             },
             {
                 id: 4,
@@ -619,7 +856,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "Even this one is not empty",
                 points: 5,
+<<<<<<< HEAD
                 published: true,
+=======
+                published: true
+>>>>>>> origin/task-forms
             },
             {
                 id: 5,
@@ -629,8 +870,13 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "",
                 points: 5,
+<<<<<<< HEAD
                 published: true,
             },
+=======
+                published: true
+            }
+>>>>>>> origin/task-forms
         ]);
         expect(publishAll(SIMPLE_QUESTIONS_2)).toEqual(SIMPLE_QUESTIONS_2);
     });
@@ -646,23 +892,37 @@ describe("Testing the Question[] functions", () => {
 
     test("Testing the addNewQuestion function", () => {
         expect(
+<<<<<<< HEAD
             addNewQuestion([], 142, "A new question", "short_answer_question"),
+=======
+            addNewQuestion([], 142, "A new question", "short_answer_question")
+>>>>>>> origin/task-forms
         ).toEqual([NEW_BLANK_QUESTION]);
         expect(
             addNewQuestion(
                 BLANK_QUESTIONS,
                 142,
                 "A new question",
+<<<<<<< HEAD
                 "short_answer_question",
             ),
+=======
+                "short_answer_question"
+            )
+>>>>>>> origin/task-forms
         ).toEqual([...BLANK_QUESTIONS, NEW_BLANK_QUESTION]);
         expect(
             addNewQuestion(
                 TRIVIA_QUESTIONS,
                 449,
                 "Colors",
+<<<<<<< HEAD
                 "multiple_choice_question",
             ),
+=======
+                "multiple_choice_question"
+            )
+>>>>>>> origin/task-forms
         ).toEqual([...TRIVIA_QUESTIONS, NEW_TRIVIA_QUESTION]);
     });
 
@@ -676,7 +936,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "",
                 points: 1,
+<<<<<<< HEAD
                 published: false,
+=======
+                published: false
+>>>>>>> origin/task-forms
             },
             {
                 id: 47,
@@ -686,7 +950,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "",
                 points: 1,
+<<<<<<< HEAD
                 published: false,
+=======
+                published: false
+>>>>>>> origin/task-forms
             },
             {
                 id: 2,
@@ -696,8 +964,13 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "",
                 points: 1,
+<<<<<<< HEAD
                 published: false,
             },
+=======
+                published: false
+            }
+>>>>>>> origin/task-forms
         ]);
         expect(renameQuestionById(BLANK_QUESTIONS, 47, "Another Name")).toEqual(
             [
@@ -709,7 +982,11 @@ describe("Testing the Question[] functions", () => {
                     options: [],
                     expected: "",
                     points: 1,
+<<<<<<< HEAD
                     published: false,
+=======
+                    published: false
+>>>>>>> origin/task-forms
                 },
                 {
                     id: 47,
@@ -719,7 +996,11 @@ describe("Testing the Question[] functions", () => {
                     options: [],
                     expected: "",
                     points: 1,
+<<<<<<< HEAD
                     published: false,
+=======
+                    published: false
+>>>>>>> origin/task-forms
                 },
                 {
                     id: 2,
@@ -729,9 +1010,15 @@ describe("Testing the Question[] functions", () => {
                     options: [],
                     expected: "",
                     points: 1,
+<<<<<<< HEAD
                     published: false,
                 },
             ],
+=======
+                    published: false
+                }
+            ]
+>>>>>>> origin/task-forms
         );
         expect(renameQuestionById(SIMPLE_QUESTIONS, 5, "Colours")).toEqual([
             {
@@ -742,7 +1029,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "4",
                 points: 1,
+<<<<<<< HEAD
                 published: true,
+=======
+                published: true
+>>>>>>> origin/task-forms
             },
             {
                 id: 2,
@@ -752,7 +1043,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "Z",
                 points: 1,
+<<<<<<< HEAD
                 published: false,
+=======
+                published: false
+>>>>>>> origin/task-forms
             },
             {
                 id: 5,
@@ -762,7 +1057,11 @@ describe("Testing the Question[] functions", () => {
                 options: ["red", "apple", "firetruck"],
                 expected: "red",
                 points: 1,
+<<<<<<< HEAD
                 published: true,
+=======
+                published: true
+>>>>>>> origin/task-forms
             },
             {
                 id: 9,
@@ -772,8 +1071,13 @@ describe("Testing the Question[] functions", () => {
                 options: ["square", "triangle", "circle"],
                 expected: "circle",
                 points: 2,
+<<<<<<< HEAD
                 published: false,
             },
+=======
+                published: false
+            }
+>>>>>>> origin/task-forms
         ]);
     });
 
@@ -782,11 +1086,19 @@ describe("Testing the Question[] functions", () => {
             changeQuestionTypeById(
                 BLANK_QUESTIONS,
                 1,
+<<<<<<< HEAD
                 "multiple_choice_question",
             ),
         ).toEqual(BLANK_QUESTIONS);
         expect(
             changeQuestionTypeById(BLANK_QUESTIONS, 1, "short_answer_question"),
+=======
+                "multiple_choice_question"
+            )
+        ).toEqual(BLANK_QUESTIONS);
+        expect(
+            changeQuestionTypeById(BLANK_QUESTIONS, 1, "short_answer_question")
+>>>>>>> origin/task-forms
         ).toEqual([
             {
                 id: 1,
@@ -796,7 +1108,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "",
                 points: 1,
+<<<<<<< HEAD
                 published: false,
+=======
+                published: false
+>>>>>>> origin/task-forms
             },
             {
                 id: 47,
@@ -806,7 +1122,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "",
                 points: 1,
+<<<<<<< HEAD
                 published: false,
+=======
+                published: false
+>>>>>>> origin/task-forms
             },
             {
                 id: 2,
@@ -816,6 +1136,7 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "",
                 points: 1,
+<<<<<<< HEAD
                 published: false,
             },
         ]);
@@ -825,6 +1146,13 @@ describe("Testing the Question[] functions", () => {
                 47,
                 "short_answer_question",
             ),
+=======
+                published: false
+            }
+        ]);
+        expect(
+            changeQuestionTypeById(BLANK_QUESTIONS, 47, "short_answer_question")
+>>>>>>> origin/task-forms
         ).toEqual([
             {
                 id: 1,
@@ -834,7 +1162,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "",
                 points: 1,
+<<<<<<< HEAD
                 published: false,
+=======
+                published: false
+>>>>>>> origin/task-forms
             },
             {
                 id: 47,
@@ -844,7 +1176,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "",
                 points: 1,
+<<<<<<< HEAD
                 published: false,
+=======
+                published: false
+>>>>>>> origin/task-forms
             },
             {
                 id: 2,
@@ -854,6 +1190,7 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "",
                 points: 1,
+<<<<<<< HEAD
                 published: false,
             },
         ]);
@@ -863,6 +1200,13 @@ describe("Testing the Question[] functions", () => {
                 3,
                 "short_answer_question",
             ),
+=======
+                published: false
+            }
+        ]);
+        expect(
+            changeQuestionTypeById(TRIVIA_QUESTIONS, 3, "short_answer_question")
+>>>>>>> origin/task-forms
         ).toEqual([
             {
                 id: 1,
@@ -872,7 +1216,11 @@ describe("Testing the Question[] functions", () => {
                 options: ["Bluey", "YoUDee", "Charles the Wonder Dog"],
                 expected: "YoUDee",
                 points: 7,
+<<<<<<< HEAD
                 published: false,
+=======
+                published: false
+>>>>>>> origin/task-forms
             },
             {
                 id: 2,
@@ -882,11 +1230,19 @@ describe("Testing the Question[] functions", () => {
                 options: [
                     "Knowledge is the light of the mind",
                     "Just U Do it",
+<<<<<<< HEAD
                     "Nothing, what's the motto with you?",
                 ],
                 expected: "Knowledge is the light of the mind",
                 points: 3,
                 published: false,
+=======
+                    "Nothing, what's the motto with you?"
+                ],
+                expected: "Knowledge is the light of the mind",
+                points: 3,
+                published: false
+>>>>>>> origin/task-forms
             },
             {
                 id: 3,
@@ -896,8 +1252,13 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "Two",
                 points: 10,
+<<<<<<< HEAD
                 published: false,
             },
+=======
+                published: false
+            }
+>>>>>>> origin/task-forms
         ]);
     });
 
@@ -911,7 +1272,11 @@ describe("Testing the Question[] functions", () => {
                 options: ["NEW OPTION"],
                 expected: "",
                 points: 1,
+<<<<<<< HEAD
                 published: false,
+=======
+                published: false
+>>>>>>> origin/task-forms
             },
             {
                 id: 47,
@@ -921,7 +1286,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "",
                 points: 1,
+<<<<<<< HEAD
                 published: false,
+=======
+                published: false
+>>>>>>> origin/task-forms
             },
             {
                 id: 2,
@@ -931,8 +1300,13 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "",
                 points: 1,
+<<<<<<< HEAD
                 published: false,
             },
+=======
+                published: false
+            }
+>>>>>>> origin/task-forms
         ]);
         expect(editOption(BLANK_QUESTIONS, 47, -1, "Another option")).toEqual([
             {
@@ -943,7 +1317,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "",
                 points: 1,
+<<<<<<< HEAD
                 published: false,
+=======
+                published: false
+>>>>>>> origin/task-forms
             },
             {
                 id: 47,
@@ -953,7 +1331,11 @@ describe("Testing the Question[] functions", () => {
                 options: ["Another option"],
                 expected: "",
                 points: 1,
+<<<<<<< HEAD
                 published: false,
+=======
+                published: false
+>>>>>>> origin/task-forms
             },
             {
                 id: 2,
@@ -963,8 +1345,13 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "",
                 points: 1,
+<<<<<<< HEAD
                 published: false,
             },
+=======
+                published: false
+            }
+>>>>>>> origin/task-forms
         ]);
         expect(editOption(SIMPLE_QUESTIONS, 5, -1, "newspaper")).toEqual([
             {
@@ -975,7 +1362,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "4",
                 points: 1,
+<<<<<<< HEAD
                 published: true,
+=======
+                published: true
+>>>>>>> origin/task-forms
             },
             {
                 id: 2,
@@ -985,7 +1376,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "Z",
                 points: 1,
+<<<<<<< HEAD
                 published: false,
+=======
+                published: false
+>>>>>>> origin/task-forms
             },
             {
                 id: 5,
@@ -995,7 +1390,11 @@ describe("Testing the Question[] functions", () => {
                 options: ["red", "apple", "firetruck", "newspaper"],
                 expected: "red",
                 points: 1,
+<<<<<<< HEAD
                 published: true,
+=======
+                published: true
+>>>>>>> origin/task-forms
             },
             {
                 id: 9,
@@ -1005,8 +1404,13 @@ describe("Testing the Question[] functions", () => {
                 options: ["square", "triangle", "circle"],
                 expected: "circle",
                 points: 2,
+<<<<<<< HEAD
                 published: false,
             },
+=======
+                published: false
+            }
+>>>>>>> origin/task-forms
         ]);
         expect(editOption(SIMPLE_QUESTIONS, 5, 0, "newspaper")).toEqual([
             {
@@ -1017,7 +1421,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "4",
                 points: 1,
+<<<<<<< HEAD
                 published: true,
+=======
+                published: true
+>>>>>>> origin/task-forms
             },
             {
                 id: 2,
@@ -1027,7 +1435,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "Z",
                 points: 1,
+<<<<<<< HEAD
                 published: false,
+=======
+                published: false
+>>>>>>> origin/task-forms
             },
             {
                 id: 5,
@@ -1037,7 +1449,11 @@ describe("Testing the Question[] functions", () => {
                 options: ["newspaper", "apple", "firetruck"],
                 expected: "red",
                 points: 1,
+<<<<<<< HEAD
                 published: true,
+=======
+                published: true
+>>>>>>> origin/task-forms
             },
             {
                 id: 9,
@@ -1047,8 +1463,13 @@ describe("Testing the Question[] functions", () => {
                 options: ["square", "triangle", "circle"],
                 expected: "circle",
                 points: 2,
+<<<<<<< HEAD
                 published: false,
             },
+=======
+                published: false
+            }
+>>>>>>> origin/task-forms
         ]);
 
         expect(editOption(SIMPLE_QUESTIONS, 5, 2, "newspaper")).toEqual([
@@ -1060,7 +1481,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "4",
                 points: 1,
+<<<<<<< HEAD
                 published: true,
+=======
+                published: true
+>>>>>>> origin/task-forms
             },
             {
                 id: 2,
@@ -1070,7 +1495,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "Z",
                 points: 1,
+<<<<<<< HEAD
                 published: false,
+=======
+                published: false
+>>>>>>> origin/task-forms
             },
             {
                 id: 5,
@@ -1080,7 +1509,11 @@ describe("Testing the Question[] functions", () => {
                 options: ["red", "apple", "newspaper"],
                 expected: "red",
                 points: 1,
+<<<<<<< HEAD
                 published: true,
+=======
+                published: true
+>>>>>>> origin/task-forms
             },
             {
                 id: 9,
@@ -1090,8 +1523,13 @@ describe("Testing the Question[] functions", () => {
                 options: ["square", "triangle", "circle"],
                 expected: "circle",
                 points: 2,
+<<<<<<< HEAD
                 published: false,
             },
+=======
+                published: false
+            }
+>>>>>>> origin/task-forms
         ]);
     });
 
@@ -1105,7 +1543,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "",
                 points: 1,
+<<<<<<< HEAD
                 published: false,
+=======
+                published: false
+>>>>>>> origin/task-forms
             },
             {
                 id: 27,
@@ -1115,7 +1557,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "",
                 points: 1,
+<<<<<<< HEAD
                 published: false,
+=======
+                published: false
+>>>>>>> origin/task-forms
             },
             {
                 id: 47,
@@ -1125,7 +1571,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "",
                 points: 1,
+<<<<<<< HEAD
                 published: false,
+=======
+                published: false
+>>>>>>> origin/task-forms
             },
             {
                 id: 2,
@@ -1135,8 +1585,13 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "",
                 points: 1,
+<<<<<<< HEAD
                 published: false,
             },
+=======
+                published: false
+            }
+>>>>>>> origin/task-forms
         ]);
         expect(duplicateQuestionInArray(BLANK_QUESTIONS, 47, 19)).toEqual([
             {
@@ -1147,7 +1602,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "",
                 points: 1,
+<<<<<<< HEAD
                 published: false,
+=======
+                published: false
+>>>>>>> origin/task-forms
             },
             {
                 id: 47,
@@ -1157,7 +1616,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "",
                 points: 1,
+<<<<<<< HEAD
                 published: false,
+=======
+                published: false
+>>>>>>> origin/task-forms
             },
             {
                 id: 19,
@@ -1167,7 +1630,11 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "",
                 points: 1,
+<<<<<<< HEAD
                 published: false,
+=======
+                published: false
+>>>>>>> origin/task-forms
             },
             {
                 id: 2,
@@ -1177,8 +1644,13 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "",
                 points: 1,
+<<<<<<< HEAD
                 published: false,
             },
+=======
+                published: false
+            }
+>>>>>>> origin/task-forms
         ]);
         expect(duplicateQuestionInArray(TRIVIA_QUESTIONS, 3, 111)).toEqual([
             {
@@ -1189,7 +1661,11 @@ describe("Testing the Question[] functions", () => {
                 options: ["Bluey", "YoUDee", "Charles the Wonder Dog"],
                 expected: "YoUDee",
                 points: 7,
+<<<<<<< HEAD
                 published: false,
+=======
+                published: false
+>>>>>>> origin/task-forms
             },
             {
                 id: 2,
@@ -1199,11 +1675,19 @@ describe("Testing the Question[] functions", () => {
                 options: [
                     "Knowledge is the light of the mind",
                     "Just U Do it",
+<<<<<<< HEAD
                     "Nothing, what's the motto with you?",
                 ],
                 expected: "Knowledge is the light of the mind",
                 points: 3,
                 published: false,
+=======
+                    "Nothing, what's the motto with you?"
+                ],
+                expected: "Knowledge is the light of the mind",
+                points: 3,
+                published: false
+>>>>>>> origin/task-forms
             },
             {
                 id: 3,
@@ -1213,11 +1697,19 @@ describe("Testing the Question[] functions", () => {
                 options: [
                     "Zero, why would there be goats on the green?",
                     "18420",
+<<<<<<< HEAD
                     "Two",
                 ],
                 expected: "Two",
                 points: 10,
                 published: false,
+=======
+                    "Two"
+                ],
+                expected: "Two",
+                points: 10,
+                published: false
+>>>>>>> origin/task-forms
             },
             {
                 id: 111,
@@ -1227,12 +1719,21 @@ describe("Testing the Question[] functions", () => {
                 options: [
                     "Zero, why would there be goats on the green?",
                     "18420",
+<<<<<<< HEAD
                     "Two",
                 ],
                 expected: "Two",
                 points: 10,
                 published: false,
             },
+=======
+                    "Two"
+                ],
+                expected: "Two",
+                points: 10,
+                published: false
+            }
+>>>>>>> origin/task-forms
         ]);
     });
 

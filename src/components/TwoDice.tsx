@@ -12,6 +12,7 @@ export function d6(): number {
 }
 
 export function TwoDice(): React.JSX.Element {
+<<<<<<< HEAD
     const [Die1, SetDie1] = useState<number>(4);
     const [Die2, SetDie2] = useState<number>(2);
     function RollLeft(): void {
@@ -32,4 +33,7 @@ export function TwoDice(): React.JSX.Element {
             <Button onClick={RollRight}>Roll Right</Button>
         </div>
     );
+=======
+    return <div>Two Dice</div>;
+>>>>>>> origin/task-forms
 }
