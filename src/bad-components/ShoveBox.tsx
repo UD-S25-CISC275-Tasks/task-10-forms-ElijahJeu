@@ -19,12 +19,7 @@ function ShoveBoxButton({
     );
 }
 
-<<<<<<< HEAD
 function MoveableBox({ postion }: { postion: number }): React.JSX.Element {
-=======
-function MoveableBox(): React.JSX.Element {
-    const [position, setPosition] = useState<number>(10);
->>>>>>> origin/task-forms
     return (
         <div
             data-testid="moveable-box"
@@ -35,18 +30,13 @@ function MoveableBox(): React.JSX.Element {
                 border: "1px solid blue",
                 display: "inline-block",
                 verticalAlign: "bottom",
-<<<<<<< HEAD
                 marginLeft: postion + "px",
-=======
-                marginLeft: position + "px",
->>>>>>> origin/task-forms
             }}
         ></div>
     );
 }
 
 export function ShoveBox(): React.JSX.Element {
-<<<<<<< HEAD
     const [position, setPosition] = useState<number>(10);
     return (
         <div>
@@ -58,21 +48,6 @@ export function ShoveBox(): React.JSX.Element {
                 ></ShoveBoxButton>
                 <MoveableBox postion={position} />
             </div>
-=======
-    const box = MoveableBox();
-
-    return (
-        <div>
-            <h3>Shove Box</h3>
-            {/* <span>The box is at: {box.position}</span>
-            <div>
-                <ShoveBoxButton
-                    position={box.position}
-                    setPosition={box.setPosition}
-                ></ShoveBoxButton>
-                {box}
-            </div> */}
->>>>>>> origin/task-forms
         </div>
     );
 }
